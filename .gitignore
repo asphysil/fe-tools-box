@@ -1,5 +1,8 @@
 #AS added
 SUPERCELL.vasp
+*.xyz
+*.dat
+*.xsf
 #macOs files
 .DS_Store
 #python 
@@ -7,6 +10,8 @@ __pycache__/
 *.pyc
 #jupyter file
 .ipynb_checkpoints
+#vscode
+.vscode
 # Prerequisites
 *.d
 
