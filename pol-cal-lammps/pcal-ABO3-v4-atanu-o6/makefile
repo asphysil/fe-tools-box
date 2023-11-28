@@ -3,7 +3,7 @@
 FC=gfortran
 FCFLAG= -Wall -Wextra -pedantic -fimplicit-none -fbacktrace 
 LIBPATH=
-LIB= ${LIBPATH} #-llapack -lblas
+LIB= #${LIBPATH} -llapack -lblas
 objects=dtype_constant.o dtype_struc.o\
         neighbour_list.o\
         relative2O_disp.o\
@@ -29,6 +29,6 @@ writefiles_list.o:writefiles_list.f90
 polarizationCal_md_v2.o:polarizationCal_md_v2.f90
 	$(FC) ${FCFLAG} -c polarizationCal_md_v2.f90 $(LIB) 
 clean:
-	rm $(objects) *.mod 
+	rm $(objects) *.mod
 cleanall:
 	rm $(objects) *.mod exeO6O12.x

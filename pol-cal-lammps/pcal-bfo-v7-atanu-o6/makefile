@@ -4,7 +4,7 @@ FC=gfortran
 FCFLAG= -Wall -Wextra -pedantic -fimplicit-none -fbacktrace 
 LIBPATH=
 LIB= ${LIBPATH} #-llapack -lblas
-objects=dtype_constant.o dtype_struc.o\
+objects=dtype_struc.o\
         neighbour_list.o\
         relative2O_disp.o\
 	readfiles_list.o\
@@ -14,8 +14,7 @@ objects=dtype_constant.o dtype_struc.o\
 exe.x:$(objects) 
 	$(FC) ${FCFLAG} -o exeO6O12.x $(objects) $(LIB) 
 
-dtype_constant.o:dtype_constant.f90 
-	$(FC) ${FCFLAG} -c dtype_constant.f90 $(LIB)
+
 dtype_struc.o:dtype_struc.f90 
 	$(FC) ${FCFLAG} -c dtype_struc.f90 $(LIB)
 relative2O_disp.o: relative2O_disp.f90
@@ -29,6 +28,6 @@ writefiles_list.o:writefiles_list.f90
 polarizationCal_md_v2.o:polarizationCal_md_v2.f90
 	$(FC) ${FCFLAG} -c polarizationCal_md_v2.f90 $(LIB) 
 clean:
-	rm $(objects) *.mod 
+	rm $(objects) *.mod
 cleanall:
 	rm $(objects) *.mod exeO6O12.x
