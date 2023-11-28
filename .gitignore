@@ -5,6 +5,8 @@ SUPERCELL.vasp
 #python 
 __pycache__/
 *.pyc
+#jupyter file
+.ipynb_checkpoints
 # Prerequisites
 *.d
 
