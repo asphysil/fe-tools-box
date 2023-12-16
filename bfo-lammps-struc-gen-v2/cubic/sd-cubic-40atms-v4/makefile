@@ -1,13 +1,15 @@
 #!/usr/bin/bash
 
-FC=mpif90
+FC=gfortran
+#mpif90
 # for debug
 FCFLAG = -Wall -Wextra -fPIC -fmax-errors=1 -g -fcheck=all -fbacktrace
 #-Wimplicit-interface -fPIC -fmax-errors=1 -g -fcheck=all -fbacktrace
 # for production run
 #FCFLAG = -Wall -Wextra -Wimplicit-interface -fPIC -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops
 
-FFTLIB=-I /global/share/mpi/mpich-ofi-gnu9-ohpc/3.4.2/lib/ 
+FFTLIB=-I /opt/cray/pe/fftw/3.3.10.5/x86_milan/
+#/global/share/mpi/mpich-ofi-gnu9-ohpc/3.4.2/lib/ 
 # -L /usr/local/lib/libfftw3.a  # directory
 # directory is the directory where this library is stored
 # a file with the name libfftw3.a

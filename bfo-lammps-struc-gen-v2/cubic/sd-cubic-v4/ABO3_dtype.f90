@@ -14,8 +14,8 @@
  !INTEGER, PARAMETER :: angle_coeffs=200  !BaTiO3
  !INTEGER, PARAMETER :: angle_coeffs=50  !PaTiO3
  REAL(dp_real), PARAMETER :: strainx=0.0,strainy=0.0, strainz=0.0    !strain in percentage
- !REAL(dp_real):: a11=4.065075, a22=4.065075, a33=4.109  ! a=b=c=4.005 BaTiO3 latice parameters
- REAL(dp_real):: a11=7.782935000, a22=7.782935000, a33=7.782935000  ! a=b=c=3.86 PbTiO3 latice parameters
+ REAL(dp_real):: a11=3.89, a22=3.89, a33=3.89  ! a=b=c=4.005 BaTiO3 latice parameters
+ !REAL(dp_real):: a11=7.782935000, a22=7.782935000, a33=7.782935000  ! a=b=c=3.86 PbTiO3 latice parameters
 
 INTEGER(dp_int), PARAMETER :: natms_max=100000000
 INTEGER, PARAMETER :: ndim3=3

@@ -1,8 +1,8 @@
 !!!!!!!!!!!!!!!!!Main Program!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       PROGRAM ABO3_domain_struc
 
-       use, intrinsic :: iso_fortran_env
-      use mpi_f08
+      use, intrinsic :: iso_fortran_env
+      !use mpi_f08
 
       USE my_constants, ONLY : dp_real, dp_int, nx, ny, nz
       USE data_structure
@@ -28,13 +28,13 @@
 
 
    ! Initialize MPI. This must be the first MPI call
-   call MPI_Init(ierror)
+   !call MPI_Init(ierror)
 
    ! Get the number of processes
-   call MPI_Comm_size(MPI_COMM_WORLD, num_proc, ierror)
+   !call MPI_Comm_size(MPI_COMM_WORLD, num_proc, ierror)
 
    ! Get the individual process rank
-   call MPI_Comm_rank(MPI_COMM_WORLD, rank, ierror)
+   !call MPI_Comm_rank(MPI_COMM_WORLD, rank, ierror)
 
 
 PRINT*, "               "
@@ -255,6 +255,6 @@ CALL  lammps_struc_inp_dmg(flag, nsba, nsti, nso1, nso2, nso3, all_angle_ti_o_ti
 300 FORMAT(3F12.8)
 
   ! No more MPI calls after Finalize
-   call MPI_Finalize(ierror)
+!   call MPI_Finalize(ierror)
 
 END PROGRAM ABO3_domain_struc

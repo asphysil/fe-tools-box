@@ -1,0 +1,17 @@
+
+############# To change
+Cell lentgh
+Cell dimesion
+Strain 
+Charge
+Atomic mass
+Angle coeffs
+INTEGER length
+
+Please modify ABO3_dtype.f90 program
+
+To modify domain structure please
+
+modify ABO3_domain.f90
+
+If the atoms more than ten laks please modify Writing FORMAT
